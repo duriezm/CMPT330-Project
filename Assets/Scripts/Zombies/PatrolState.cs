@@ -27,9 +27,15 @@ public class PatrolState : BaseState
             if (waitTimer > 3)
             {
                 if (waypointIndex < enemy.path.waypoints.Count - 1)
+                {
                     waypointIndex++;
+                }
+
                 else
+                {
                     waypointIndex = 0;
+                }
+                    
                 enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
                 waitTimer = 0;
             }
