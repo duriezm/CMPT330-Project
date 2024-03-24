@@ -7,13 +7,20 @@ public class PatrolState : BaseState
     // track which waypoint we are currently targeting
     public int waypointIndex;
     public float waitTimer;
+    public Animator animator;
     public override void Enter()
     {
         
     }
     public override void Perform()
     {
+        animator.SetTrigger("StartMove");
         PatrolCycle();
+        if (enemy.CanSeePlayer())
+        {
+            animator.SetTrigger("Attack");
+            stateMachine.ChangeState(new AttackState());
+        }
     }
     public override void Exit()
     {
@@ -24,7 +31,7 @@ public class PatrolState : BaseState
         if (enemy.Agent.remainingDistance < 0.2f)
         {
             waitTimer += Time.deltaTime;
-            if (waitTimer > 3)
+            if (waitTimer > 2)
             {
                 if (waypointIndex < enemy.path.waypoints.Count - 1)
                 {

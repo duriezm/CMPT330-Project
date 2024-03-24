@@ -5,12 +5,10 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     public BaseState activeState;
-    public PatrolState patrolState;
-
+    
     public void Initialise()
     {
-        patrolState = new PatrolState();
-        ChangeState(patrolState);
+        ChangeState(new PatrolState());
     }
 
     // Start is called before the first frame update
@@ -29,7 +27,7 @@ public class StateMachine : MonoBehaviour
     }
     public void ChangeState(BaseState newState)
     {
-        if(activeState != null)
+        if (activeState != null)
         {
             // run cleanup on activeState
             activeState.Exit();
