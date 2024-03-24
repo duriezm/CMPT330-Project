@@ -13,14 +13,14 @@ public class Enemy : MonoBehaviour
     // debugging purposes
     [SerializeField]
     [Header("Sight Values")]
-    public float sightDistance = 30f;
-    public float fieldOfView = 85f;
+    public float sightDistance = 40f;
+    public float fieldOfView = 180f;
     public float eyeHeight = 1.1f;
     [Header("Weapon Values")]
     [Range(0.1f, 1f)]
     public float attackRate;
     Transform target;
-    private float speed = 2f;
+    private float speed = 5f;
 
     // used to set animation
     private Animator animator;
@@ -29,12 +29,12 @@ public class Enemy : MonoBehaviour
     private int waypointIndex;
     private float waitTimer;
 
-    // timer for when zombie loses sight
-    private float lostSightTimer;
-
-
     // waypoints to patrol
     public List<Transform> waypoints = new List<Transform>();
+
+    // 0 is uninitalized or idle
+    // 1 is walking, 2 is attacking
+    public int state = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -44,16 +44,30 @@ public class Enemy : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("ZombieContinueWalk", true);
         animator.SetBool("GoIdleToStayIdle", true);
+        state = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         // seeing player is true, and will move towards target
         if (CanSeePlayer())
         {
-            lostSightTimer = 0;
+            // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
+            // idle to attack
+            if (state == 0)
+            {
+                animator.SetBool("ZombieContinueWalk", false);
+                animator.SetTrigger("StartMove");
+                state = 2;
+            }
+            // walk to attack
+            else if (state == 1)
+            {
+                animator.SetTrigger("Attack");
+                state = 2;
+            }
+            // pause patrol if zombie is patrolling
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             if (MoveTowardsPlayer())
             {
@@ -62,6 +76,20 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
+            // idle to walk
+            if (state == 0)
+            {
+                animator.SetBool("ZombieContinueWalk", true);
+                animator.SetTrigger("StartMove");
+                state = 1;
+            }
+            // attack to walk
+            else if (state == 2)
+            {
+                animator.SetTrigger("LostSightBackToPatrol");
+                state = 1;
+            }
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             PatrolState();
         }
@@ -91,7 +119,7 @@ public class Enemy : MonoBehaviour
                             agent.transform.LookAt(player.transform);
                             // in scene, you can see we use ray tracing to get player lock on
                             Debug.DrawRay(ray.origin, ray.direction * sightDistance);
-                            return true;                            
+                            return true;
                         }
                     }
                 }
@@ -105,8 +133,6 @@ public class Enemy : MonoBehaviour
         // move zombie closer to player and how quickly he closes the distance
         var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-
-
 
         // Check the position of the zombie and player and compare
         //if (Vector3.Distance(transform.position, player.transform.position) < 0.0001f)
@@ -135,7 +161,7 @@ public class Enemy : MonoBehaviour
         if (agent.remainingDistance < 0.2f)
         {
             waitTimer += Time.deltaTime;
-            if (waitTimer > 2)
+            if (waitTimer > 1)
             {
                 if (waypointIndex < waypoints.Count - 1)
                 {
