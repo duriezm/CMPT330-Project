@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.XR;
 
 public class Enemy : MonoBehaviour
 {
-    private StateMachine stateMachine;
     private NavMeshAgent agent;
     private GameObject player;
-    public NavMeshAgent Agent { get => agent; }
-    public GameObject Player { get => player; }
 
     // debugging purposes
     [SerializeField]
-    private string currentState;
-    public Path path;
     [Header("Sight Values")]
     public float sightDistance = 30f;
     public float fieldOfView = 85f;
@@ -25,14 +22,24 @@ public class Enemy : MonoBehaviour
     Transform target;
     private float speed = 2f;
 
-    public Animator animator;
+    // used to set animation
+    private Animator animator;
+
+    // track which waypoint we are currently targeting
+    private int waypointIndex;
+    private float waitTimer;
+
+    // timer for when zombie loses sight
+    private float lostSightTimer;
+
+
+    // waypoints to patrol
+    public List<Transform> waypoints = new List<Transform>();
 
     // Start is called before the first frame update
     void Start()
     {
-        stateMachine = GetComponent<StateMachine>();
         agent = GetComponent<NavMeshAgent>();
-        stateMachine.Initialise();
         player = GameObject.FindGameObjectWithTag("Player");
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("ZombieContinueWalk", true);
@@ -42,22 +49,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CanSeePlayer();
-        currentState = stateMachine.activeState.ToString();
-
-        if (CanSeePlayer() == true)
+        
+        // seeing player is true, and will move towards target
+        if (CanSeePlayer())
         {
-            // move zombie closer to player, how quickly
-            var step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-
-            // Check if the position of the zombie and player are equal
-            if (Vector3.Distance(transform.position, player.transform.position) < 0.001f)
+            lostSightTimer = 0;
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            if (MoveTowardsPlayer())
             {
-                player.transform.position *= -1.0f;
+                ArmAttack();
             }
         }
-
+        else
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+            PatrolState();
+        }
     }
     // is the player close enough to be seen?
     public bool CanSeePlayer()
@@ -80,9 +87,10 @@ public class Enemy : MonoBehaviour
                     {
                         if (hitInfo.transform.gameObject == player)
                         {
+                            // have zombie adjust facing to player
+                            agent.transform.LookAt(player.transform);
+                            // in scene, you can see we use ray tracing to get player lock on
                             Debug.DrawRay(ray.origin, ray.direction * sightDistance);
-
-
                             return true;                            
                         }
                     }
@@ -90,5 +98,56 @@ public class Enemy : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public bool MoveTowardsPlayer()
+    {
+        // move zombie closer to player and how quickly he closes the distance
+        var step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+
+
+
+        // Check the position of the zombie and player and compare
+        //if (Vector3.Distance(transform.position, player.transform.position) < 0.0001f)
+        //{
+        //    player.transform.position *= -1f;
+        //}
+
+        return true;
+    }
+
+    public void ArmAttack()
+    {
+
+    }
+
+    public void AttackState()
+    {
+
+    }
+    public void IdleState()
+    {
+
+    }
+    public void PatrolState()
+    {
+        if (agent.remainingDistance < 0.2f)
+        {
+            waitTimer += Time.deltaTime;
+            if (waitTimer > 2)
+            {
+                if (waypointIndex < waypoints.Count - 1)
+                {
+                    waypointIndex++;
+                }
+                else
+                {
+                    waypointIndex = 0;
+                }
+                agent.SetDestination(waypoints[waypointIndex].position);
+                waitTimer = 0;
+            }
+        }
     }
 }
