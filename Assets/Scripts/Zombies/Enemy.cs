@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,8 +18,9 @@ public class Enemy : MonoBehaviour
     public float fieldOfView = 180f;
     public float eyeHeight = 1.1f;
     [Header("Weapon Values")]
+    public Transform leftarm;
+    public Transform rightarm;
     [Range(0.1f, 1f)]
-    public float attackRate;
     Transform target;
     private float speed = 5f;
 
@@ -69,10 +71,7 @@ public class Enemy : MonoBehaviour
             }
             // pause patrol if zombie is patrolling
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-            if (MoveTowardsPlayer())
-            {
-                ArmAttack();
-            }
+            MoveTowardsPlayer();
         }
         else
         {
@@ -117,6 +116,7 @@ public class Enemy : MonoBehaviour
                         {
                             // have zombie adjust facing to player
                             agent.transform.LookAt(player.transform);
+                            
                             // in scene, you can see we use ray tracing to get player lock on
                             Debug.DrawRay(ray.origin, ray.direction * sightDistance);
                             return true;
@@ -128,11 +128,15 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
-    public bool MoveTowardsPlayer()
+    public void MoveTowardsPlayer()
     {
-        // move zombie closer to player and how quickly he closes the distance
-        var step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+        if (Vector3.Distance(transform.position, player.transform.position) > 1.25f)
+        {
+            // move zombie closer to player and how quickly he closes the distance
+            var step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+        }
+
 
         // Check the position of the zombie and player and compare
         //if (Vector3.Distance(transform.position, player.transform.position) < 0.0001f)
@@ -140,22 +144,9 @@ public class Enemy : MonoBehaviour
         //    player.transform.position *= -1f;
         //}
 
-        return true;
+        return;
     }
 
-    public void ArmAttack()
-    {
-
-    }
-
-    public void AttackState()
-    {
-
-    }
-    public void IdleState()
-    {
-
-    }
     public void PatrolState()
     {
         if (agent.remainingDistance < 0.2f)

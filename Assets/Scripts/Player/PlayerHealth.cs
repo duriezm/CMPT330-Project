@@ -25,6 +25,10 @@ public class PlayerHealth : MonoBehaviour
     {
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
+        if (health < 0)
+        {
+
+        }
 
     }
     public void UpdateHealthUI()
@@ -61,5 +65,9 @@ public class PlayerHealth : MonoBehaviour
     public void RestoreHealth(float healAmount)
     {
         health += healAmount;
+    }
+    public float getHealth()
+    {
+        return health;
     }
 }
