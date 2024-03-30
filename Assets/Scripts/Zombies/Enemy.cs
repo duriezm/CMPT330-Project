@@ -41,7 +41,6 @@ public class Enemy : MonoBehaviour
 
     private int zombieHealth;
     public int maxHealth=100;
-    //bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -53,17 +52,11 @@ public class Enemy : MonoBehaviour
         animator.SetBool("GoIdleToStayIdle", true);
         state = 0;
         zombieHealth = maxHealth;
-        //isDead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (isDead)
-        //{
-        //    print("Zombie is dead");
-        //    return;
-        //}
         // seeing player is true, and will move towards target
         if (CanSeePlayer())
         {
@@ -149,13 +142,6 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
 
-
-        // Check the position of the zombie and player and compare
-        //if (Vector3.Distance(transform.position, player.transform.position) < 0.0001f)
-        //{
-        //    player.transform.position *= -1f;
-        //}
-
         return;
     }
 
@@ -184,7 +170,6 @@ public class Enemy : MonoBehaviour
         zombieHealth -= damage;
         if (zombieHealth <= 0)
         {
-            //isDead = true;
             // lets test
             Destroy(gameObject);
         }
