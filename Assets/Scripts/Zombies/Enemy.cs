@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.Processors;
 using UnityEngine.XR;
 
 public class Enemy : MonoBehaviour
@@ -38,6 +39,9 @@ public class Enemy : MonoBehaviour
     // 1 is walking, 2 is attacking
     public int state = 0;
 
+    private int zombieHealth;
+    bool isDead;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +51,18 @@ public class Enemy : MonoBehaviour
         animator.SetBool("ZombieContinueWalk", true);
         animator.SetBool("GoIdleToStayIdle", true);
         state = 0;
+        zombieHealth = 100;
+        isDead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDead)
+        {
+            print("Zombie is dead");
+            return;
+        }
         // seeing player is true, and will move towards target
         if (CanSeePlayer())
         {
@@ -165,6 +176,14 @@ public class Enemy : MonoBehaviour
                 agent.SetDestination(waypoints[waypointIndex].position);
                 waitTimer = 0;
             }
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        zombieHealth -= damage;
+        if (zombieHealth <= 0)
+        {
+            isDead = true;
         }
     }
 }

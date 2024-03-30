@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Zombie
+  - Gun
+  - Bullet
+  - CritHit
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Interactable
   - Characters
   - Enemies
-  - 
+  - WhatIsBullet
   - 
   - 
   - 
