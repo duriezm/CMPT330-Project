@@ -148,10 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -5646671971083564679}
-  bounciness: 0
-  useGravity: 0
-  gunDamage: 16
-  maxCollisions: 0
+  gunDamage: 0
+  critDamage: 100
+  minDamage: 10
+  maxDamage: 20
   maxLifetime: 3
 --- !u!96 &1467428946975159012
 TrailRenderer:

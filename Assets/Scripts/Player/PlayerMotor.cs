@@ -43,9 +43,6 @@ public class PlayerMotor : MonoBehaviour
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
     }
-
-
-    // sprint is broken, fix later
     public void sprint()
     {
         speed = sprintSpeed;

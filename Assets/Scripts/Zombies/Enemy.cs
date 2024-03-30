@@ -164,14 +164,18 @@ public class Enemy : MonoBehaviour
                 waitTimer = 0;
             }
         }
+        return;
     }
     public void TakeDamage(int damage)
     {
+        print(zombieHealth);
         zombieHealth -= damage;
         if (zombieHealth <= 0)
         {
-            // lets test
+            //lets set zombie to an animimation to dead, later implementation if time applicable
             Destroy(gameObject);
         }
+        print(zombieHealth);
+        return;
     }
 }

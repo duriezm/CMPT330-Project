@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealthUI();
         if (health < 0)
         {
-
+            // pause game or reset game
         }
 
     }
@@ -55,16 +55,19 @@ public class PlayerHealth : MonoBehaviour
             percentComplete = percentComplete * percentComplete;
             frontHealthBar.fillAmount = Mathf.Lerp(fillF, backHealthBar.fillAmount, percentComplete);
         }
+        return;
     }
     public void TakeDamage(float damage)
     {
         health -= damage;
         lerpTimer = 0f;
+        return;
     }
 
     public void RestoreHealth(float healAmount)
     {
         health += healAmount;
+        return;
     }
     public float getHealth()
     {

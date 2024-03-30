@@ -8,6 +8,7 @@ TagManager:
   - Gun
   - Bullet
   - CritHit
+  - WeakHit
   layers:
   - Default
   - TransparentFX

@@ -9,15 +9,18 @@ public class CustomBullet : MonoBehaviour
 
     // damage
     public int gunDamage;
+    public int critDamage=100;
+    public int minDamage=10;
+    public int maxDamage=20;
 
     //lifetime
     public float maxLifetime;
 
-
     // Start is called before the first frame update
     private void Start()
     {
-        
+        gunDamage = Random.Range(minDamage, maxDamage);
+
     }
     // Update is called once per frame
     private void Update()
@@ -31,13 +34,27 @@ public class CustomBullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //explode if bullet hits an enemy directly and explodeOnTouch is activated
+        // body shot
         if (collision.collider.CompareTag("Zombie"))
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(gunDamage);
-            print("Zombie has been hit");
+            minDamage = 20;
+            maxDamage = 30;
+            gunDamage = Random.Range(minDamage, maxDamage);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(gunDamage);
+        }
+        // head shot
+        else if (collision.collider.CompareTag("CritHit"))
+        {
+            gunDamage = Random.Range(minDamage, maxDamage);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(critDamage);
+        }
+        // head shot
+        else if (collision.collider.CompareTag("WeakHit"))
+        {
+            gunDamage = Random.Range(minDamage, maxDamage);
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(gunDamage);
         }
         Destroy(gameObject);
+        return;
     }
 }

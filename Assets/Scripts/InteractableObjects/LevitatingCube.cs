@@ -9,16 +9,6 @@ public class LevitatingCube : Interactable
 
     private bool spinCube;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     protected override void Interact()
     {
         spinCube =! spinCube;
