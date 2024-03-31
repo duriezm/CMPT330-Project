@@ -19,10 +19,6 @@ public class ProjectileGun : MonoBehaviour
 
     int bulletsLeft, bulletsShot;
 
-    //Recoil
-    public Rigidbody playerRb;
-    public float recoilForce;
-
     // bools
     bool shooting, readyToShoot, reloading;
 
@@ -45,7 +41,7 @@ public class ProjectileGun : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
         MyInput();
         // set ammo display, if it exists
@@ -132,7 +128,6 @@ public class ProjectileGun : MonoBehaviour
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         }
 
-
         bulletsLeft--;
         bulletsShot++;
 
@@ -140,9 +135,6 @@ public class ProjectileGun : MonoBehaviour
         {
             Invoke("ResetShot", timeBetweenShooting);
             allowInvoke = false;
-
-            //add recoil to player
-            playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
         }
 
         // if more then one bulletspertap make sure to repeat shoot function

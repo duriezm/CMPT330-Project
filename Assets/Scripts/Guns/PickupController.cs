@@ -34,7 +34,7 @@ public class PickupController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 distanceToPlayer = player.position - transform.position;
         if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)

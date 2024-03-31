@@ -8,11 +8,14 @@ public class PlayerHealth : MonoBehaviour
 {
     private float health;
     private float lerpTimer;
-    public int maxHealth = 100;
+    public float maxHealth = 100f;
     public float chipSpeed = 2f;
     public Image frontHealthBar;
     public Image backHealthBar;
     public TextMeshProUGUI healthText;
+
+    public GameOverMenu gameOverFunc;
+    private bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +24,18 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
-        if (health < 0)
+        if (health <= 0 && !isDead)
         {
             // pause game or reset game
+            isDead = true;
+            Time.timeScale = 0f;
+            gameOverFunc.gameOver();
+            
         }
-
     }
     public void UpdateHealthUI()
     {
@@ -48,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if (fillF < hFraction)
         {
-            backHealthBar.color = Color.red;
+            backHealthBar.color = Color.green;
             backHealthBar.fillAmount = hFraction;
             lerpTimer += Time.deltaTime;
             float percentComplete = lerpTimer / chipSpeed;

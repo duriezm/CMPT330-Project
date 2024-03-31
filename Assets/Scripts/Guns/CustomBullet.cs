@@ -23,7 +23,7 @@ public class CustomBullet : MonoBehaviour
 
     }
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
         //count down lifetime
         maxLifetime -= Time.deltaTime;

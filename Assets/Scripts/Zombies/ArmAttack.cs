@@ -10,7 +10,7 @@ public class ArmAttack : MonoBehaviour
         Transform hitTransform = collision.transform;
         if (hitTransform.CompareTag("Player"))
         {
-            hitTransform.GetComponent<PlayerHealth>().TakeDamage(2);
+            hitTransform.GetComponent<PlayerHealth>().TakeDamage(5);
         }
         return;
     }
