@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
-public class PickupController : MonoBehaviour
+public class PickupControllerSecondary : MonoBehaviour
 {
-    public ProjectileGun gunScript;
+    public ProjectileGunSecondary gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
@@ -24,6 +24,7 @@ public class PickupController : MonoBehaviour
             gunScript.enabled = false;
             rb.isKinematic = false;
             coll.isTrigger = false;
+            slotFull = false;
         }
         if (equipped)
         {
@@ -34,7 +35,7 @@ public class PickupController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector3 distanceToPlayer = player.position - transform.position;
         if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)
@@ -77,7 +78,7 @@ public class PickupController : MonoBehaviour
         coll.isTrigger = false;
 
         // gun carries momentum of player
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        //rb.velocity = player.GetComponent<Rigidbody>().velocity;
 
         // addforce
         rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);
