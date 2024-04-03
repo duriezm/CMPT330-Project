@@ -4,8 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - bullet: {fileID: 2207589821398110146, guid: b2c00618092661849bf004c5fd5636bc, type: 3}
-  - playerRb: {instanceID: 0}
+  - bullet: {instanceID: 0}
   - fpsCam: {instanceID: 0}
   - attackPoint: {instanceID: 0}
   - muzzleFlash: {instanceID: 0}

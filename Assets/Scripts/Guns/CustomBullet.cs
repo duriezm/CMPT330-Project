@@ -15,12 +15,21 @@ public class CustomBullet : MonoBehaviour
     public int minDamageArm = 10;
     public int maxDamageArm = 20;
 
+    public int maxCollision;
+    int collision;
+    PhysicMaterial physics_mat;
+
+    [Range(0f, 1f)]
+    public float bounciness;
+    public bool useGravity;
+
     //lifetime
     public float maxLifetime;
 
     // Start is called before the first frame update
     private void Start()
     {
+        Setup();
         gunDamage = Random.Range(minDamageArm, maxDamageArm);
     }
     // Update is called once per frame
@@ -52,7 +61,23 @@ public class CustomBullet : MonoBehaviour
             gunDamage = Random.Range(minDamageArm, maxDamageArm);
             collision.gameObject.GetComponent<Enemy>().TakeDamage(gunDamage);
         }
-        Destroy(gameObject);
+        if (bounciness == 0)
+        {
+            Destroy(gameObject);
+        }
         return;
+    }
+    private void Setup()
+    {
+        // create new physic material
+        physics_mat = new PhysicMaterial();
+        physics_mat.bounciness = bounciness;
+        physics_mat.frictionCombine = PhysicMaterialCombine.Minimum;
+        physics_mat.bounceCombine = PhysicMaterialCombine.Maximum;
+        //assign material to collider
+        GetComponent<SphereCollider>().material = physics_mat;
+
+        // set gravity
+        rb.useGravity = useGravity;
     }
 }

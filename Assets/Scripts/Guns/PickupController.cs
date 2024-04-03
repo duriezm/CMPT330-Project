@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
-public class PickupControllerSecondary : MonoBehaviour
+public class PickupController : MonoBehaviour
 {
-    public ProjectileGunSecondary gunScript;
+    public ProjectileGun gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
@@ -56,7 +56,7 @@ public class PickupControllerSecondary : MonoBehaviour
         transform.SetParent(gunContainer);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
-        transform.localScale = Vector3.one;
+        //transform.localScale = Vector3.one;
 
         // make rigidbody kinematic and boxcollider a trigger
         rb.isKinematic = true;

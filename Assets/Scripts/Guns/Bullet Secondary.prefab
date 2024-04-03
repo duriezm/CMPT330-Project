@@ -154,6 +154,9 @@ MonoBehaviour:
   maxDamageBody: 30
   minDamageArm: 10
   maxDamageArm: 20
+  maxCollision: 0
+  bounciness: 0
+  useGravity: 0
   maxLifetime: 3
 --- !u!96 &1467428946975159012
 TrailRenderer:
@@ -207,7 +210,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.5146741
+        value: 0.4181432
         inSlope: 0
         outSlope: -0.10286908
         tangentMode: 1

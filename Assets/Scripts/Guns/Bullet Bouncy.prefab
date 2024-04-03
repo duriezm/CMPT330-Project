@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8539508993104953500}
   - component: {fileID: -5646671971083564679}
   - component: {fileID: 1467428946975159012}
-  - component: {fileID: 7525734017164250391}
+  - component: {fileID: 8359085310820444759}
   m_Layer: 9
   m_Name: Bullet Bouncy
   m_TagString: Bullet
@@ -116,7 +116,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2207589821398110146}
   serializedVersion: 4
-  m_Mass: 0.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -130,7 +130,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
@@ -195,7 +195,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.5726886
       - serializedVersion: 3
-        time: 0.50613815
+        time: 1
         value: 0
         inSlope: -0.96335745
         outSlope: -0.2889686
@@ -248,7 +248,7 @@ TrailRenderer:
   m_Autodestruct: 1
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &7525734017164250391
+--- !u!114 &8359085310820444759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,17 +257,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2207589821398110146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c94e22eb01d9614a9d2d664390e6900, type: 3}
+  m_Script: {fileID: 11500000, guid: bd2fded0495ce544c9ee5807778f1a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -5646671971083564679}
-  gunDamage: 20
-  critDamage: 75
+  gunDamage: 25
+  critDamage: 78
   minDamageBody: 15
   maxDamageBody: 25
   minDamageArm: 8
-  maxDamageArm: 18
+  maxDamageArm: 16
   maxCollision: 7
   bounciness: 1
-  useGravity: 0
-  maxLifetime: 5
+  useGravity: 1
+  maxLifetime: 4
