@@ -348,7 +348,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -381,7 +381,7 @@ MonoBehaviour:
   - {fileID: 1942747540}
   - {fileID: 1041607668}
   state: 0
-  zombieMaxHealth: 100
+  zombieMaxHealth: 750
   healthBar: {fileID: 1644430807}
 --- !u!4 &39250744 stripped
 Transform:
@@ -5498,6 +5498,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4633263305345981218, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92a2b1d2cb9089741b3d1e090638aa80, type: 2}
     - target: {fileID: 4746007197863832273, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -5568,7 +5572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_Name
-      value: Zombie2
+      value: PowerZombie
       objectReference: {fileID: 0}
     - target: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_TagString
@@ -6639,6 +6643,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4633263305345981218, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5138f5c1b15aa848a697e0a7c25414e, type: 2}
     - target: {fileID: 4746007197863832273, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -6709,7 +6717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_Name
-      value: Zombie3
+      value: SpeedZombie
       objectReference: {fileID: 0}
     - target: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_TagString
@@ -8264,7 +8272,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -8297,7 +8305,7 @@ MonoBehaviour:
   - {fileID: 1942747540}
   - {fileID: 765113312}
   state: 0
-  zombieMaxHealth: 100
+  zombieMaxHealth: 500
   healthBar: {fileID: 248739729}
 --- !u!4 &1136609583 stripped
 Transform:
@@ -13748,6 +13756,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4633263305345981218, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c09539e3bfd5832448deff1f9e41cde6, type: 2}
     - target: {fileID: 4746007197863832273, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -13818,7 +13830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_Name
-      value: Zombie4
+      value: AbsoluteMonster
       objectReference: {fileID: 0}
     - target: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
       propertyPath: m_TagString
@@ -14682,7 +14694,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 12
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -14715,7 +14727,7 @@ MonoBehaviour:
   - {fileID: 1041607668}
   - {fileID: 680964555}
   state: 0
-  zombieMaxHealth: 100
+  zombieMaxHealth: 75
   healthBar: {fileID: 248739729}
 --- !u!4 &1994149461 stripped
 Transform:
