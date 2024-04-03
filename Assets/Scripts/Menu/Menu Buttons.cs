@@ -7,21 +7,42 @@ public class MenuButtons : MonoBehaviour
 {
     public void OnPlayButton()
     {
-        SceneManager.LoadScene("Main");
+        StartCoroutine(OnPlayButtonWait());
+        
     }
-
     public void OnOptionsButton()
     {
-        SceneManager.LoadScene("OptionsScreen");
+        StartCoroutine(OptionsScreenWait());
     }
     public void OnQuitButton()
     {
-        Application.Quit();
-        Debug.Log("Game is exiting");
+        StartCoroutine(OnQuitButtonWait());
+        
     }
     public void OnTutorialButton()
     {
+        StartCoroutine(OnTutorialButtonWait());
+        
+    }
+    IEnumerator OnQuitButtonWait()
+    {
+        yield return new WaitForSeconds(.5f);
+        Application.Quit();
+        Debug.Log("Game is exiting");
+    }
+    IEnumerator OptionsScreenWait()
+    {
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene("OptionsScreen");
+    }
+    IEnumerator OnTutorialButtonWait()
+    {
+        yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene("Tutorial");
     }
-
+    IEnumerator OnPlayButtonWait()
+    {
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene("Main");
+    }
 }

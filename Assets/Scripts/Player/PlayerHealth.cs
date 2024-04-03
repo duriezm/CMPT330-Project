@@ -34,7 +34,6 @@ public class PlayerHealth : MonoBehaviour
             isDead = true;
             Time.timeScale = 0f;
             gameOverFunc.gameOver();
-            
         }
     }
     public void UpdateHealthUI()
@@ -46,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         if (fillB > hFraction)
         {
             frontHealthBar.fillAmount = hFraction;
-            backHealthBar.color = Color.red;
+            backHealthBar.color = Color.grey;
             lerpTimer += Time.deltaTime;
             float percentComplete = lerpTimer / chipSpeed;
             percentComplete = percentComplete * percentComplete;
