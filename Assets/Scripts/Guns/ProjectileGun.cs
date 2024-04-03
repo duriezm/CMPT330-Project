@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ProjectileGun : MonoBehaviour
 {
-
     // bullet
     public GameObject bullet;
 
@@ -122,11 +121,11 @@ public class ProjectileGun : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up, ForceMode.Impulse);
 
-        // instantiate muzzle flash, if you have one
-        if (muzzleFlash != null)
-        {
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-        }
+        //// instantiate muzzle flash, if you have one
+        //if (muzzleFlash != null)
+        //{
+        //    Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        //}
 
         bulletsLeft--;
         bulletsShot++;

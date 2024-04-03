@@ -18,11 +18,15 @@ public class Enemy : MonoBehaviour
     public float sightDistance = 40f;
     public float fieldOfView = 180f;
     public float eyeHeight = 1.1f;
+
     [Header("Weapon Values")]
     public Transform leftarm;
     public Transform rightarm;
+
     [Range(0.1f, 1f)]
     Transform target;
+
+    // speed of zombie
     private float speed = 5f;
 
     // used to set animation
@@ -39,8 +43,13 @@ public class Enemy : MonoBehaviour
     // 1 is walking, 2 is attacking
     public int state = 0;
 
+    // zombie health
     private int zombieHealth;
-    public int maxHealth=100;
+    public int zombieMaxHealth = 100;
+
+    //healthbar
+    [SerializeField]
+    FloatingHealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +60,14 @@ public class Enemy : MonoBehaviour
         animator.SetBool("ZombieContinueWalk", true);
         animator.SetBool("GoIdleToStayIdle", true);
         state = 0;
-        zombieHealth = maxHealth;
+        zombieHealth = zombieMaxHealth;
+        healthBar = GetComponentInChildren<FloatingHealthBar>();
+        healthBar.UpdateHeathBar(zombieHealth, zombieMaxHealth);
+    }
+
+    private void Awake()
+    {
+        healthBar = GetComponentInChildren<FloatingHealthBar>();
     }
 
     // Update is called once per frame
@@ -164,12 +180,13 @@ public class Enemy : MonoBehaviour
                 waitTimer = 0;
             }
         }
-        return;
+        //return;
     }
     public void TakeDamage(int damage)
     {
         print(zombieHealth);
         zombieHealth -= damage;
+        healthBar.UpdateHeathBar(zombieHealth, zombieMaxHealth);
         if (zombieHealth <= 0)
         {
             //lets set zombie to an animimation to dead, later implementation if time applicable

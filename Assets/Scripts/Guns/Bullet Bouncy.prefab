@@ -261,13 +261,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -5646671971083564679}
-  gunDamage: 25
-  critDamage: 78
-  minDamageBody: 15
-  maxDamageBody: 25
-  minDamageArm: 8
-  maxDamageArm: 16
-  maxCollision: 7
+  gunDamage: 10
+  critDamage: 65
+  minDamageBody: 10
+  maxDamageBody: 20
+  minDamageArm: 5
+  maxDamageArm: 13
+  maxCollision: 8
   bounciness: 1
   useGravity: 1
   maxLifetime: 4

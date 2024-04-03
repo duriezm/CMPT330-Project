@@ -148,12 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -5646671971083564679}
-  gunDamage: 15
-  critDamage: 100
-  minDamageBody: 20
-  maxDamageBody: 30
-  minDamageArm: 10
-  maxDamageArm: 20
+  gunDamage: 10
+  critDamage: 40
+  minDamageBody: 13
+  maxDamageBody: 22
+  minDamageArm: 8
+  maxDamageArm: 17
   maxCollision: 0
   bounciness: 0
   useGravity: 0
