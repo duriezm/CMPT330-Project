@@ -355,12 +355,14 @@ MonoBehaviour:
   eyeHeight: 0
   leftarm: {fileID: 1507611269}
   rightarm: {fileID: 25175522}
+  speed: 5
   waypoints:
   - {fileID: 680964555}
   - {fileID: 765113312}
   state: 0
-  zombieMaxHealth: 500
+  zombieMaxHealth: 1000
   healthBar: {fileID: 1644430807}
+  renewedZombieCounter: 0
 --- !u!4 &39250744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5757209670788853393, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
@@ -916,6 +918,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
   m_PrefabInstance: {fileID: 1237932484}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &120293902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120293903}
+  - component: {fileID: 120293905}
+  - component: {fileID: 120293904}
+  m_Layer: 5
+  m_Name: ZombieText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &120293903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120293902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 187197589}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -9.8, y: 2.7}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &120293904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120293902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Zombies Left:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 46.27661, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &120293905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120293902}
+  m_CullTransparentMesh: 1
 --- !u!1 &140379347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1504,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3201816797211333236, guid: e75e0bbfe0e9d8c4b99d6d6b6829eef6, type: 3}
   m_PrefabInstance: {fileID: 181331795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &187197588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187197589}
+  m_Layer: 5
+  m_Name: ZombieCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &187197589
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187197588}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 120293903}
+  - {fileID: 1639320101}
+  m_Father: {fileID: 1137487968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 859.69995, y: 514.30005}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &194707925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7477,6 +7650,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 464483077678398050, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_Text
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2357361932000324240, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -7577,6 +7754,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6408776797486823481, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408776797486823481, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -126.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6720086246637053006, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7592,6 +7777,14 @@ PrefabInstance:
     - target: {fileID: 6720086246637053006, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896825131475320231, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -162.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896825131475320231, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -133.3
       objectReference: {fileID: 0}
     - target: {fileID: 9088196225874851446, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7610,8 +7803,14 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3785264813121518938, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+    - {fileID: 8971242478392046334, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+    - {fileID: 1155901176160554797, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5358553324032678864, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 187197589}
     - targetCorrespondingSourceObject: {fileID: 5358553324032678864, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1664920328}
@@ -8264,12 +8463,14 @@ MonoBehaviour:
   eyeHeight: 0
   leftarm: {fileID: 1527206402}
   rightarm: {fileID: 1246181247}
+  speed: 3
   waypoints:
   - {fileID: 1793377307}
   - {fileID: 852174898}
   state: 0
-  zombieMaxHealth: 100
+  zombieMaxHealth: 500
   healthBar: {fileID: 1676822007}
+  renewedZombieCounter: 0
 --- !u!1 &1137487967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2357361932000324240, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
@@ -10803,7 +11004,6 @@ MonoBehaviour:
   allowButtonHold: 1
   fpsCam: {fileID: 1398963893}
   attackPoint: {fileID: 970221945}
-  muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1273288394}
   allowInvoke: 1
 --- !u!114 &1465450125
@@ -11818,6 +12018,140 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636304349}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1639320098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639320101}
+  - component: {fileID: 1639320100}
+  - component: {fileID: 1639320099}
+  m_Layer: 5
+  m_Name: ZombiesLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1639320099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639320098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 4
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1639320100
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639320098}
+  m_CullTransparentMesh: 1
+--- !u!224 &1639320101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639320098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 187197589}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 75.4, y: 2.9}
+  m_SizeDelta: {x: 50, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1644430805
 GameObject:
   m_ObjectHideFlags: 0
@@ -13325,7 +13659,6 @@ MonoBehaviour:
   allowButtonHold: 1
   fpsCam: {fileID: 1398963893}
   attackPoint: {fileID: 1667295335}
-  muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1273288394}
   allowInvoke: 1
 --- !u!114 &1780583011
@@ -14230,7 +14563,6 @@ MonoBehaviour:
   allowButtonHold: 1
   fpsCam: {fileID: 1398963893}
   attackPoint: {fileID: 870284308}
-  muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1273288394}
   allowInvoke: 1
 --- !u!114 &1933097873
@@ -14686,12 +15018,14 @@ MonoBehaviour:
   eyeHeight: 0
   leftarm: {fileID: 1899317677}
   rightarm: {fileID: 1409017011}
+  speed: 14
   waypoints:
   - {fileID: 1041607668}
   - {fileID: 680964555}
   state: 0
   zombieMaxHealth: 75
   healthBar: {fileID: 248739729}
+  renewedZombieCounter: 0
 --- !u!4 &1994149461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5757209670788853393, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
@@ -14707,7 +15041,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -14909,7 +15243,6 @@ MonoBehaviour:
   allowButtonHold: 1
   fpsCam: {fileID: 1398963893}
   attackPoint: {fileID: 1829100511}
-  muzzleFlash: {fileID: 0}
   ammunitionDisplay: {fileID: 1273288394}
   allowInvoke: 1
 --- !u!114 &2048534653
@@ -15235,6 +15568,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 657174769}
@@ -15242,6 +15579,18 @@ PrefabInstance:
       propertyPath: sightDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: zombieDisplay
+      value: 
+      objectReference: {fileID: 1639320099}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: zombieMaxHealth
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: yourTextVariable
+      value: 
+      objectReference: {fileID: 1639320099}
     - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
     Transform target;
 
     // speed of zombie
+    [SerializeField]
     private float speed = 5f;
 
     // used to set animation
@@ -50,6 +52,8 @@ public class Enemy : MonoBehaviour
     //healthbar
     [SerializeField]
     FloatingHealthBar healthBar;
+
+    public int renewedZombieCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -110,7 +114,7 @@ public class Enemy : MonoBehaviour
                 animator.SetTrigger("LostSightBackToPatrol");
                 state = 1;
             }
-            //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             PatrolState();
         }
     }
@@ -184,7 +188,7 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        print(zombieHealth);
+        //print(zombieHealth);
         zombieHealth -= damage;
         healthBar.UpdateHeathBar(zombieHealth, zombieMaxHealth);
         if (zombieHealth <= 0)
@@ -192,7 +196,7 @@ public class Enemy : MonoBehaviour
             //lets set zombie to an animimation to dead, later implementation if time applicable
             Destroy(gameObject);
         }
-        print(zombieHealth);
+        //print(zombieHealth);
         return;
     }
 }

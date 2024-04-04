@@ -26,7 +26,7 @@ public class ProjectileGun : MonoBehaviour
     public Transform attackPoint;
 
     // graphics
-    public GameObject muzzleFlash;
+    //public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
 
     //bug fixing
