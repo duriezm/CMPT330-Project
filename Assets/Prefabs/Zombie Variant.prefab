@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 161816806737057234}
   zombiecamera: {fileID: 0}
-  healthTarget: {fileID: 0}
+  healthTarget: {fileID: 4299629275435337597}
   HealthOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &5940490490785476025
 GameObject:
@@ -753,12 +753,14 @@ MonoBehaviour:
   eyeHeight: 0
   leftarm: {fileID: 3860668845760922429}
   rightarm: {fileID: 7602105277490626238}
+  speed: 5
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
   state: 0
   zombieMaxHealth: 100
   healthBar: {fileID: 0}
+  renewedZombieCounter: 0
 --- !u!95 &6736199092099741106
 Animator:
   serializedVersion: 5
