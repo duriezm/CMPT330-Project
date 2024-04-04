@@ -3405,7 +3405,7 @@ GameObject:
   - component: {fileID: 356127687}
   - component: {fileID: 356127686}
   m_Layer: 0
-  m_Name: RedPlatform
+  m_Name: LastCubePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7612,11 +7612,9 @@ GameObject:
   - component: {fileID: 929427745}
   - component: {fileID: 929427744}
   - component: {fileID: 929427743}
-  - component: {fileID: 929427742}
-  - component: {fileID: 929427741}
-  - component: {fileID: 929427740}
+  - component: {fileID: 929427746}
   m_Layer: 6
-  m_Name: RedCube
+  m_Name: LastCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7637,57 +7635,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 377640302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &929427740
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929427738}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 65ea7fa22e2017e4d83cee96a00193a0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &929427741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929427738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe03bcfb3d61ab649af030886b73e4c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useEvents: 0
-  promptMessage: Collect to start game. *Collectable*
-  cube: {fileID: 929427738}
---- !u!114 &929427742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929427738}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9e5cafaef332c44883a114ca73863e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xrotateSpeed: 125
-  zrotateSpeed: 125
-  yrotateSpeed: 0
 --- !u!65 &929427743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7759,6 +7706,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929427738}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &929427746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929427738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4dc97c9b594e4f429d95334545ef51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Collect to start game. *Collectable*
+  cube: {fileID: 929427738}
 --- !u!4 &933214716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2718957474909456230, guid: bf83772f56b73ce40b1e99f516f2a1cb, type: 3}
@@ -12471,9 +12433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2207589821398110146, guid: 5c12e78591459ec419b85f18be53fd7d, type: 3}
   shootForce: 150
-  timeBetweenShooting: 1
+  timeBetweenShooting: 3
   spread: 0
-  reloadTime: 3
+  reloadTime: 5
   timeBetweenShots: 1
   magazineSize: 15
   bulletsPerTap: 1
@@ -12514,9 +12476,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cee977791e9b1a84aa855f4b064d42bb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15932,7 +15894,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cecd8a2a4a1a36f48a606a32df57b872, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -18305,7 +18267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2718957474909456225, guid: bf83772f56b73ce40b1e99f516f2a1cb, type: 3}
       propertyPath: m_Name
-      value: RedLight
+      value: LastCubeLight
       objectReference: {fileID: 0}
     - target: {fileID: 2718957474909456230, guid: bf83772f56b73ce40b1e99f516f2a1cb, type: 3}
       propertyPath: m_LocalScale.x

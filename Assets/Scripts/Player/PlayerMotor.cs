@@ -13,9 +13,6 @@ public class PlayerMotor : MonoBehaviour
     public float jumpHeight = 1.5f;
     public float sprintSpeed = 8f;
 
-    //private AudioSource movementSound;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +37,6 @@ public class PlayerMotor : MonoBehaviour
         {
             playerVelocity.y = -2f;
         }
-
 
         //if (!movementSound)
         //{

@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CubeBehaviour : MonoBehaviour
 {
-    
     public int xrotateSpeed=125;
     public int zrotateSpeed=125;
     public int yrotateSpeed=125;

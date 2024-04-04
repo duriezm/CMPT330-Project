@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevitatingCube : Interactable
 {
@@ -11,7 +12,7 @@ public class LevitatingCube : Interactable
 
     protected override void Interact()
     {
-        spinCube =! spinCube;
+        spinCube = !spinCube;
         cube.GetComponent<Animator>().SetBool("isSpinning", spinCube);
     }
 }

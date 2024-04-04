@@ -149,11 +149,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -5646671971083564679}
   gunDamage: 100
-  critDamage: 250
-  minDamageBody: 125
-  maxDamageBody: 175
-  minDamageArm: 85
-  maxDamageArm: 115
+  critDamage: 500
+  minDamageBody: 300
+  maxDamageBody: 600
+  minDamageArm: 200
+  maxDamageArm: 400
   maxCollision: 0
   bounciness: 0
   useGravity: 0
