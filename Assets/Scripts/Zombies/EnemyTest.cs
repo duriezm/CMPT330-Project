@@ -7,7 +7,7 @@ using UnityEngine.AI;
 using UnityEngine.InputSystem.Processors;
 using UnityEngine.XR;
 
-public class Enemy : MonoBehaviour
+public class EnemyTest : MonoBehaviour
 {
     private NavMeshAgent agent;
     private GameObject player;
@@ -31,13 +31,6 @@ public class Enemy : MonoBehaviour
 
     // used to set animation
     private Animator animator;
-
-    // track which waypoint we are currently targeting
-    private int waypointIndex;
-    private float waitTimer;
-
-    // waypoints to patrol
-    public List<Transform> waypoints = new List<Transform>();
 
     // 0 is uninitalized or idle
     // 1 is walking, 2 is attacking
@@ -64,7 +57,6 @@ public class Enemy : MonoBehaviour
         healthBar = GetComponentInChildren<FloatingHealthBar>();
         healthBar.UpdateHeathBar(zombieHealth, zombieMaxHealth);
     }
-
     private void Awake()
     {
         healthBar = GetComponentInChildren<FloatingHealthBar>();
@@ -91,27 +83,20 @@ public class Enemy : MonoBehaviour
                 state = 2;
             }
             // pause patrol if zombie is patrolling
-            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            //gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             MoveTowardsPlayer();
         }
         else
         {
             // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
-            // idle to walk
-            if (state == 0)
-            {
-                animator.SetBool("ZombieContinueWalk", true);
-                animator.SetTrigger("StartMove");
-                state = 1;
-            }
             // attack to walk
-            else if (state == 2)
+            if (state == 2)
             {
                 animator.SetTrigger("LostSightBackToPatrol");
                 state = 1;
+                //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             }
             //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-            PatrolState();
         }
     }
     // is the player close enough to be seen?
@@ -161,27 +146,6 @@ public class Enemy : MonoBehaviour
         return;
     }
 
-    public void PatrolState()
-    {
-        if (agent.remainingDistance < 0.2f)
-        {
-            waitTimer += Time.deltaTime;
-            if (waitTimer > 1)
-            {
-                if (waypointIndex < waypoints.Count - 1)
-                {
-                    waypointIndex++;
-                }
-                else
-                {
-                    waypointIndex = 0;
-                }
-                agent.SetDestination(waypoints[waypointIndex].position);
-                waitTimer = 0;
-            }
-        }
-        //return;
-    }
     public void TakeDamage(int damage)
     {
         print(zombieHealth);
