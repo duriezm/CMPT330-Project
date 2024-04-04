@@ -576,8 +576,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Collect these cubes. Action button to collect *Collectable*
+  promptMessage: Action button to collect *Collectable*
   cube: {fileID: 164774008}
+  interactSwitch: 1
+  collectableText: {fileID: 891708442}
+  collectable: 1
 --- !u!95 &164774015
 Animator:
   serializedVersion: 5
@@ -3232,6 +3235,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &591185255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7425285579842125836, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+  m_PrefabInstance: {fileID: 1622019658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &602824818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9056884185424794269, guid: 6f65d5dfb94c7cd4fbdb0841de530057, type: 3}
@@ -3993,6 +4007,17 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &827778689 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2642314801810798585, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+  m_PrefabInstance: {fileID: 1622019658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &844095178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1314534564946616626, guid: 1afb7c4814232774b9316ceb1c54c291, type: 3}
@@ -4236,6 +4261,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867355181}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &891708442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6819863899993307246, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+  m_PrefabInstance: {fileID: 1622019658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &916158542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4323,6 +4359,7 @@ GameObject:
   - component: {fileID: 929427744}
   - component: {fileID: 929427743}
   - component: {fileID: 929427746}
+  - component: {fileID: 929427747}
   m_Layer: 6
   m_Name: LastCube
   m_TagString: Untagged
@@ -4429,8 +4466,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Collect to start game. *Collectable*
+  promptMessage: Collect to start Campaign. *Collectable*
   cube: {fileID: 929427738}
+  collectableText: {fileID: 827778689}
+  collectable: 0
+--- !u!114 &929427747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929427738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9e5cafaef332c44883a114ca73863e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrotateSpeed: 125
+  zrotateSpeed: 125
+  yrotateSpeed: 125
 --- !u!4 &933214716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2718957474909456230, guid: bf83772f56b73ce40b1e99f516f2a1cb, type: 3}
@@ -4583,7 +4637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Collect Cube, Start new game.
+  m_text: Collect Cube, Start Campaign.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5358,6 +5412,9 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: 'Action Button: Press ''E'' to Interact. *Uncollectable*'
   cube: {fileID: 1205288246}
+  interactSwitch: 0
+  collectableText: {fileID: 827778689}
+  collectable: 0
 --- !u!1001 &1218797644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5462,7 +5519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5470,7 +5527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.3
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6359,8 +6416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Collect all 3 cubes to teleport to main game. *Collectable*
+  promptMessage: Collect all 3 cubes to teleport to Campaign. *Collectable*
   cube: {fileID: 1378395070}
+  interactSwitch: 1
+  collectableText: {fileID: 591185255}
+  collectable: 1
 --- !u!95 &1378395077
 Animator:
   serializedVersion: 5
@@ -8006,6 +8066,9 @@ MonoBehaviour:
   useEvents: 0
   promptMessage: Refill Ammo
   cube: {fileID: 1689988809}
+  interactSwitch: 0
+  collectableText: {fileID: 0}
+  collectable: 0
 --- !u!114 &1689988811
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,12 +9,6 @@ public class ZombieCounter : MonoBehaviour
     void Start()
     {
         zombieKilled = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void incrementZombieCounter()
