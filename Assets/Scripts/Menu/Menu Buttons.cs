@@ -42,6 +42,6 @@ public class MenuButtons : MonoBehaviour
     IEnumerator OnPlayButtonWait()
     {
         yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Game Main");
     }
 }
