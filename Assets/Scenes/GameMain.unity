@@ -168,11 +168,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
+  zombies:
+  - {fileID: 3970975648848639937, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+  - {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+  - {fileID: 4340703931824351646, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+  - {fileID: 2416754927992788154, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
   zombieInterval: 5
   spawnXStart: 600
   spawnXEnd: 650
   spawnZStart: 600
   spawnZEnd: 650
+  table: 32000000190000001400000005000000
+  total: 0
+  randomNum: 0
 --- !u!114 &145586259 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7788221750505637956, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
@@ -1375,11 +1383,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 3305586238293945766, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+  zombies:
+  - {fileID: 3970975648848639937, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+  - {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+  - {fileID: 4340703931824351646, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+  - {fileID: 2416754927992788154, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
   zombieInterval: 5
   spawnXStart: 400
   spawnXEnd: 450
   spawnZStart: 600
   spawnZEnd: 650
+  table: 32000000190000001400000005000000
+  total: 0
+  randomNum: 0
 --- !u!4 &1159326690
 Transform:
   m_ObjectHideFlags: 0
@@ -1440,11 +1456,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
+  zombies:
+  - {fileID: 3970975648848639937, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+  - {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+  - {fileID: 4340703931824351646, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+  - {fileID: 2416754927992788154, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
   zombieInterval: 5
   spawnXStart: 300
   spawnXEnd: 350
   spawnZStart: 600
   spawnZEnd: 650
+  table: 32000000190000001400000005000000
+  total: 0
+  randomNum: 0
 --- !u!1 &1272404260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,11 +1819,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 6453975549802939466, guid: 87e227a16f4e59a428ee309567fdfe5f, type: 3}
+  zombies:
+  - {fileID: 3970975648848639937, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+  - {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+  - {fileID: 4340703931824351646, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+  - {fileID: 2416754927992788154, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
   zombieInterval: 5
   spawnXStart: 300
   spawnXEnd: 350
   spawnZStart: 400
   spawnZEnd: 450
+  table: 32000000190000001400000005000000
+  total: 0
+  randomNum: 0
 --- !u!114 &1787661252 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5498461934401998479, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
