@@ -7,7 +7,6 @@ public class MenuButtons : MonoBehaviour
     public void OnPlayButton()
     {
         StartCoroutine(OnPlayButtonWait());
-        
     }
     public void OnOptionsButton()
     {
@@ -16,12 +15,10 @@ public class MenuButtons : MonoBehaviour
     public void OnQuitButton()
     {
         StartCoroutine(OnQuitButtonWait());
-        
     }
     public void OnTutorialButton()
     {
         StartCoroutine(OnTutorialButtonWait());
-        
     }
     IEnumerator OnQuitButtonWait()
     {
