@@ -92,7 +92,6 @@ public class Enemy : MonoBehaviour
                 // idle -> walk
                 if (state == 0)
                 {
-                    animator.SetBool("ZombieContinueWalk", true);
                     animator.SetTrigger("StartMove");
                 }
                 // attack -> walk
