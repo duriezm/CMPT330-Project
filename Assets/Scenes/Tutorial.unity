@@ -4524,11 +4524,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5154010266989119465, guid: 3a162d9b3eabf5541aeafc613988e630, type: 3}
   m_PrefabInstance: {fileID: 916158542}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &916450882 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1467494935708410299, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
-  m_PrefabInstance: {fileID: 1622019658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &929427738
 GameObject:
   m_ObjectHideFlags: 0
@@ -7703,7 +7698,7 @@ PrefabInstance:
     - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1817588702}
+      objectReference: {fileID: 0}
     - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
@@ -7799,7 +7794,7 @@ PrefabInstance:
     - target: {fileID: 8862240060249946690, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1817588702}
+      objectReference: {fileID: 0}
     - target: {fileID: 8862240060249946690, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -7818,10 +7813,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5358553324032678864, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       insertIndex: 6
       addedObject: {fileID: 2028734695}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2357361932000324240, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1817588702}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
 --- !u!1 &1636304349
 GameObject:
@@ -9388,29 +9380,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1817588696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2357361932000324240, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
-  m_PrefabInstance: {fileID: 1622019658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1817588701 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5358553324032678864, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
   m_PrefabInstance: {fileID: 1622019658}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1817588702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817588696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa066f3fdcc9ef4bb80f0aa749208be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 916450882}
 --- !u!1001 &1843256473
 PrefabInstance:
   m_ObjectHideFlags: 0
