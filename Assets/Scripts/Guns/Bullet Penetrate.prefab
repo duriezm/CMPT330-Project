@@ -150,10 +150,10 @@ MonoBehaviour:
   rb: {fileID: -5646671971083564679}
   gunDamage: 100
   critDamage: 250
-  minDamageBody: 100
-  maxDamageBody: 101
-  minDamageArm: 90
-  maxDamageArm: 110
+  minDamageBody: 125
+  maxDamageBody: 175
+  minDamageArm: 85
+  maxDamageArm: 115
   maxCollision: 0
   bounciness: 0
   useGravity: 0

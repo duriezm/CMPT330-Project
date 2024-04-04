@@ -65,7 +65,11 @@ public class CustomBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        return;
+        if (collision.collider.CompareTag("GoToMain"))
+        {
+            collision.gameObject.GetComponent<DestroyForMain>().TakeDamage(200);
+        }
+            return;
     }
     private void Setup()
     {

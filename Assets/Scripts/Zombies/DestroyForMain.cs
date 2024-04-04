@@ -1,9 +1,11 @@
 
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class DestroyForMain : MonoBehaviour
 {
     private NavMeshAgent agent;
     private GameObject player;
@@ -193,6 +195,7 @@ public class Enemy : MonoBehaviour
         {
             //lets set zombie to an animimation to dead, later implementation if time applicable
             Destroy(gameObject);
+            SceneManager.LoadScene("Main");
         }
         //print(zombieHealth);
         return;
