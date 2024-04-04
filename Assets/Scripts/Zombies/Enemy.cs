@@ -191,6 +191,7 @@ public class Enemy : MonoBehaviour
         healthBar.UpdateHeathBar(zombieHealth, zombieMaxHealth);
         if (zombieHealth <= 0)
         {
+            FindObjectOfType<ZombieCounter>().incrementZombieCounter();
             //lets set zombie to an animimation to dead, later implementation if time applicable
             Destroy(gameObject);
         }

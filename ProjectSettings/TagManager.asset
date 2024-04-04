@@ -10,6 +10,7 @@ TagManager:
   - CritHit
   - WeakHit
   - GoToMain
+  - ZombieCounter
   layers:
   - Default
   - TransparentFX
