@@ -95,25 +95,30 @@ public class DestroyForMain : MonoBehaviour
         }
         else
         {
-            // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
-            // idle to walk
-            if (state == 0)
-            {
-                animator.SetBool("ZombieContinueWalk", true);
-                animator.SetTrigger("StartMove");
-                state = 1;
-            }
-            // attack to walk
-            else if (state == 2)
-            {
-                animator.SetTrigger("LostSightBackToPatrol");
-                state = 1;
-            }
-            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             if (waypoints.Count != 0)
             {
-                PatrolState();
+                // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
+                // idle to walk
+                if (state == 0)
+                {
+                    animator.SetBool("ZombieContinueWalk", true);
+                    animator.SetTrigger("StartMove");
+                    state = 1;
+                }
+                // attack to walk
+                else if (state == 2)
+                {
+                    animator.SetTrigger("LostSightBackToPatrol");
+                    state = 1;
+                }
+                gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             }
+            else
+            {
+                state = 0;
+                animator.SetTrigger("GoToIdle");
+            }
+
         }
     }
     // is the player close enough to be seen?

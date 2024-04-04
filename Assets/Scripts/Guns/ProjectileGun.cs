@@ -36,11 +36,6 @@ public class ProjectileGun : MonoBehaviour
     private void Start()
     {
         gunSoundEffect = GetComponent<AudioSource>();
-        // ensure gunsoundeffects are equipped, otherwise throw this in console
-        //if (gunSoundEffect == null)
-        //{
-        //    Debug.LogError("No gunSoundEffect found");
-        //}
     }
     private void Awake()
     {

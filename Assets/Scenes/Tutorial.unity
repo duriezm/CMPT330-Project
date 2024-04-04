@@ -304,6 +304,87 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40278969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &84927032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3279207351439423487, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: zombiecamera
+      value: 
+      objectReference: {fileID: 1398963893}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_Name
+      value: SpeedZombietest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
 --- !u!1 &119914481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7865550363014291326, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
@@ -5519,7 +5600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 38.2
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5527,7 +5608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.3
+      value: 36.3
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7186,6 +7267,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2718957474909456230, guid: bf83772f56b73ce40b1e99f516f2a1cb, type: 3}
   m_PrefabInstance: {fileID: 2101645934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1581100538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8030239814530611560, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+  m_PrefabInstance: {fileID: 1622019658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa066f3fdcc9ef4bb80f0aa749208be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1602134247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7424,7 +7516,7 @@ PrefabInstance:
     - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1581100538}
     - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
@@ -7524,7 +7616,7 @@ PrefabInstance:
     - target: {fileID: 8862240060249946690, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1581100538}
     - target: {fileID: 8862240060249946690, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
@@ -9980,6 +10072,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4457972405791845435, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457972405791845435, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1907303447}
@@ -10004,6 +10100,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 212943766632254996, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 212943766632254996, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -10085,6 +10185,10 @@ PrefabInstance:
       propertyPath: zombiecamera
       value: 
       objectReference: {fileID: 1398963893}
+    - target: {fileID: 514205965027985063, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 514205965027985063, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -10288,6 +10392,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1041607668}
@@ -10456,6 +10564,7 @@ SceneRoots:
   - {fileID: 2809169595520035618}
   - {fileID: 4990404034079153374}
   - {fileID: 5831869562182730788}
+  - {fileID: 84927032}
   - {fileID: 1062172924455357922}
   - {fileID: 1066433541}
   - {fileID: 620234451}
