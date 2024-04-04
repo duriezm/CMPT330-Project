@@ -3990,7 +3990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2357361932000324240, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_Name
-      value: Canvas Variant
+      value: BackupCanvas Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3484104719261351129, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4007,6 +4007,18 @@ PrefabInstance:
     - target: {fileID: 3484104719261351129, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3025354452393948118}
+    - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5358553324032678864, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_Pivot.x
@@ -4119,6 +4131,14 @@ PrefabInstance:
     - target: {fileID: 7896825131475320231, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -133.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862240060249946690, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: eaa066f3fdcc9ef4bb80f0aa749208be, type: 3}
+    - target: {fileID: 8862240060249946690, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9088196225874851446, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_SizeDelta.x
