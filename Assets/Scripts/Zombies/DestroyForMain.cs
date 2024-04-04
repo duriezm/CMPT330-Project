@@ -68,57 +68,49 @@ public class DestroyForMain : MonoBehaviour
     {
         healthBar = GetComponentInChildren<FloatingHealthBar>();
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
-        // seeing player is true, and will move towards target
+        // player spotted
         if (CanSeePlayer())
         {
-            // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
-            // idle to attack
-            if (state == 0)
-            {
-                animator.SetBool("ZombieContinueWalk", false);
-                animator.SetTrigger("StartMove");
-                state = 2;
-            }
-            // walk to attack
-            else if (state == 1)
-            {
-                animator.SetTrigger("Attack");
-                state = 2;
-            }
+            // transition animation from one state to another
+            // state=0 idle, state=1 walking, state=2 attacking
+            // idle -> attack
+            animator.SetTrigger("Attack");
+            state = 2;
             // pause patrol if zombie is patrolling
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             MoveTowardsPlayer();
         }
         else
         {
-            if (waypoints.Count != 0)
+            // has waypoints to patrol && can't see player, back to patrol
+            if (waypoints.Count > 0)
             {
-                // transition animation from one state to another, state=0 idle, state=1 walking, state=2 attacking
-                // idle to walk
+                // transition animation from one state to another
+                // state=0 idle, state=1 walking, state=2 attacking
+                // idle -> walk
                 if (state == 0)
                 {
                     animator.SetBool("ZombieContinueWalk", true);
                     animator.SetTrigger("StartMove");
-                    state = 1;
                 }
-                // attack to walk
-                else if (state == 2)
+                // attack -> walk
+                else if (state == 2 || state == 1)
                 {
                     animator.SetTrigger("LostSightBackToPatrol");
-                    state = 1;
                 }
+                state = 1;
                 gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+                PatrolState();
             }
-            else
+            // no patrol waypoints && can't see player, back to idle
+            else if (waypoints.Count == 0)
             {
                 state = 0;
-                animator.SetTrigger("GoToIdle");
+                animator.SetTrigger("StopMovement");
             }
-
         }
     }
     // is the player close enough to be seen?

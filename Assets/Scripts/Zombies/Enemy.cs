@@ -75,9 +75,7 @@ public class Enemy : MonoBehaviour
         // player spotted
         if (CanSeePlayer())
         {
-            // transition animation from one state to another
-            // state=0 idle, state=1 walking, state=2 attacking
-            // idle -> attack
+            // Setting up for attack
             animator.SetTrigger("Attack");
             state = 2;
             // pause patrol if zombie is patrolling
@@ -110,7 +108,7 @@ public class Enemy : MonoBehaviour
             else if (waypoints.Count == 0)
             {
                 state = 0;
-                animator.SetTrigger("GoToIdle");
+                animator.SetTrigger("StopMovement");
             }
         }
     }
