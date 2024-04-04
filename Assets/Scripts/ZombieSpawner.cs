@@ -10,6 +10,18 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float zombieInterval = 5.0f;
 
+    [SerializeField]
+    private float spawnXStart = 0.0f;
+
+    [SerializeField]
+    private float spawnXEnd = 0.0f;
+    
+    [SerializeField]
+    private float spawnZStart = 0.0f;
+
+    [SerializeField]
+    private float spawnZEnd = 0.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +32,7 @@ public class Spawner : MonoBehaviour
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-        GameObject newZombie = Instantiate(enemy, new Vector3(Random.Range(600f, 630f), 6.5f, Random.Range(250f, 300f)), Quaternion.identity);
+        GameObject newZombie = Instantiate(enemy, new Vector3(Random.Range(spawnXStart, spawnXEnd), 6.5f, Random.Range(spawnZStart, spawnZEnd)), Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
     }
 }
