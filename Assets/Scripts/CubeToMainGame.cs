@@ -7,6 +7,6 @@ public class CubeToMainGame : Interactable
     
     protected override void Interact()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("GameMain");
     }
 }
