@@ -30,13 +30,24 @@ public class ProjectileGun : MonoBehaviour
     //bug fixing
     public bool allowInvoke = true;
 
+    // get gun sound effect
+    private AudioSource gunSoundEffect;
+
+    private void Start()
+    {
+        gunSoundEffect = GetComponent<AudioSource>();
+        // ensure gunsoundeffects are equipped, otherwise throw this in console
+        //if (gunSoundEffect == null)
+        //{
+        //    Debug.LogError("No gunSoundEffect found");
+        //}
+    }
     private void Awake()
     {
         // make sure magazine is full
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
-
     // Update is called once per frame
     private void FixedUpdate()
     {
@@ -69,13 +80,11 @@ public class ProjectileGun : MonoBehaviour
         {
             Reload();
         }
-
         // shooting
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             // set bullets shots to 0
             bulletsShot = 0;
-
             Shoot();
         }
     }
@@ -127,7 +136,7 @@ public class ProjectileGun : MonoBehaviour
 
         bulletsLeft--;
         bulletsShot++;
-
+        gunSoundEffect.PlayOneShot(gunSoundEffect.clip);
         if (allowInvoke)
         {
             Invoke("ResetShot", timeBetweenShooting);

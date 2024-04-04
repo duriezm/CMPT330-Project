@@ -25,10 +25,13 @@ public class CustomBullet : MonoBehaviour
     //lifetime
     public float maxLifetime;
 
+    private AudioSource bulletSoundEffect;
+
     // Start is called before the first frame update
     private void Start()
     {
         Setup();
+        bulletSoundEffect = GetComponent<AudioSource>();
         gunDamage = Random.Range(minDamageArm, maxDamageArm);
     }
     // Update is called once per frame
@@ -64,11 +67,17 @@ public class CustomBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+            bulletSoundEffect.PlayOneShot(bulletSoundEffect.clip);
+        }
         if (collision.collider.CompareTag("GoToMain"))
         {
             collision.gameObject.GetComponent<DestroyForMain>().TakeDamage(200);
         }
-            return;
+        
+        
+        return;
     }
     private void Setup()
     {

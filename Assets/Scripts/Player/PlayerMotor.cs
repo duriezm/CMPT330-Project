@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -12,10 +13,14 @@ public class PlayerMotor : MonoBehaviour
     public float jumpHeight = 1.5f;
     public float sprintSpeed = 8f;
 
+    //private AudioSource movementSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1f;
+        //movementSound = GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
     }
 
@@ -35,6 +40,13 @@ public class PlayerMotor : MonoBehaviour
         {
             playerVelocity.y = -2f;
         }
+
+
+        //if (!movementSound)
+        //{
+        //    movementSound.PlayOneShot(movementSound.clip);
+        //}
+        //movementSound.PlayOneShot(movementSound.clip);
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
@@ -53,5 +65,8 @@ public class PlayerMotor : MonoBehaviour
     {
         speed = 5f;
     }
-
+    IEnumerator movementWait()
+    {
+        yield return new WaitForSeconds(.5f);
+    }
 }
