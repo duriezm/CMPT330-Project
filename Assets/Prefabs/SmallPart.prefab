@@ -51,7 +51,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -79,7 +79,8 @@ GameObject:
   - component: {fileID: 4404246324265165499}
   - component: {fileID: 1924702695056474131}
   - component: {fileID: 1187743678951554779}
-  m_Layer: 0
+  - component: {fileID: 4913349151904689310}
+  m_Layer: 6
   m_Name: SmallCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,9 +167,27 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4913349151904689310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838736671309418851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe03bcfb3d61ab649af030886b73e4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Green resource found
+  cube: {fileID: 5838736671309418851}
+  interactSwitch: 1
+  collectableText: {fileID: 0}
+  collectable: 1

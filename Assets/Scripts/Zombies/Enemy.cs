@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject player;
 
+    [SerializeField]
+    private List<GameObject> parts;
+
+
     // debugging purposes
     [SerializeField]
     [Header("Sight Values")]
@@ -189,8 +193,25 @@ public class Enemy : MonoBehaviour
             FindObjectOfType<ZombieCounter>().incrementZombieCounter();
             //lets set zombie to an animimation to dead, later implementation if time applicable
             Destroy(gameObject);
+            dropPart();
         }
         //print(zombieHealth);
         return;
     }
+
+    public void dropPart() {
+        int randNum = Random.Range(0, 100);
+        int[] table = {40, 20, 10};
+        for (int i = 0; i < table.Length;i++) {
+            if (randNum <= table[i]) {
+                GameObject part = Instantiate(parts[i], new Vector3(Random.Range(355f,396f), 0.5f, Random.Range(476f,485f)), Quaternion.identity);
+                part.SetActive(true);
+                return;
+            }
+            else {
+                randNum -= table[i];
+            }
+        }
+    }
+    
 }
