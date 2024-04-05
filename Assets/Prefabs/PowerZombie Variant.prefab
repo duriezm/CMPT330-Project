@@ -849,17 +849,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770a938cf55a94f4bbedd7c880a9e8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  sightDistance: 30
-  fieldOfView: 150
-=======
+
   parts:
   - {fileID: 2091234965275283132, guid: 869951735f3e9164e80bf542d29644ed, type: 3}
   - {fileID: 5308342982988878745, guid: 943462dbeba742f49998ef2f8ec5c2f0, type: 3}
   - {fileID: 6464619302216848916, guid: fad0b779eb44f0c40ab15308feee3938, type: 3}
-  sightDistance: 25
-  fieldOfView: 120
->>>>>>> Stashed changes
+  sightDistance: 30
+  fieldOfView: 150
+
   eyeHeight: 0
   leftarm: {fileID: 2625972200126629637}
   rightarm: {fileID: 8674654613881059974}
