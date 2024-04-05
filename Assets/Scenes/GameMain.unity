@@ -10296,6 +10296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1851936635}
     m_Modifications:
+    - target: {fileID: 1187743678951554779, guid: 869951735f3e9164e80bf542d29644ed, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2091234965275283132, guid: 869951735f3e9164e80bf542d29644ed, type: 3}
       propertyPath: m_Name
       value: SmallPart
@@ -10340,6 +10344,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5838736671309418851, guid: 869951735f3e9164e80bf542d29644ed, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611287221210805107, guid: 869951735f3e9164e80bf542d29644ed, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10379,6 +10391,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1851936635}
     m_Modifications:
+    - target: {fileID: 880720733530950788, guid: fad0b779eb44f0c40ab15308feee3938, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256999284762604363, guid: fad0b779eb44f0c40ab15308feee3938, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5547714577267112731, guid: fad0b779eb44f0c40ab15308feee3938, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -10423,6 +10443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargePart
       objectReference: {fileID: 0}
+    - target: {fileID: 8161190602437842118, guid: fad0b779eb44f0c40ab15308feee3938, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10462,6 +10486,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1851936635}
     m_Modifications:
+    - target: {fileID: 1102215771227217581, guid: 943462dbeba742f49998ef2f8ec5c2f0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190062727602983868, guid: 943462dbeba742f49998ef2f8ec5c2f0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039123881948007336, guid: 943462dbeba742f49998ef2f8ec5c2f0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4986900982357078976, guid: 943462dbeba742f49998ef2f8ec5c2f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
