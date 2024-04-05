@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6803047522993826671}
   - component: {fileID: 8211619199868292942}
   - component: {fileID: 3039123881948007336}
-  m_Layer: 0
+  - component: {fileID: 5056395190161950921}
+  m_Layer: 6
   m_Name: MediumCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,12 +100,30 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5056395190161950921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190062727602983868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe03bcfb3d61ab649af030886b73e4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Blue resource found
+  cube: {fileID: 2190062727602983868}
+  interactSwitch: 1
+  collectableText: {fileID: 0}
+  collectable: 1
 --- !u!1 &5308342982988878745
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +175,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

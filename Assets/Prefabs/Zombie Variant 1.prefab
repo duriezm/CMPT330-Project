@@ -44,6 +44,22 @@ PrefabInstance:
       propertyPath: zombieMaxHealth
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: parts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: parts.Array.data[0]
+      value: 
+      objectReference: {fileID: 2091234965275283132, guid: 869951735f3e9164e80bf542d29644ed, type: 3}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: parts.Array.data[1]
+      value: 
+      objectReference: {fileID: 5308342982988878745, guid: 943462dbeba742f49998ef2f8ec5c2f0, type: 3}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: parts.Array.data[2]
+      value: 
+      objectReference: {fileID: 6464619302216848916, guid: fad0b779eb44f0c40ab15308feee3938, type: 3}
     - target: {fileID: 2354572603963177783, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_CastShadows
       value: 0

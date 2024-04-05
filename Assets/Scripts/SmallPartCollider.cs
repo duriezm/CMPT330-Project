@@ -8,10 +8,14 @@ public class SmallPartCollider : MonoBehaviour
     {
         PartInventory partInventory = other.GetComponent<PartInventory>();
 
+        Debug.Log(other);
+        Debug.Log(partInventory);
+
         if (partInventory != null)
         {
             partInventory.smallCollected();
-            gameObject.SetActive(false);
+            Debug.Log(gameObject);
+            Destroy(gameObject);
         }
     }
 }
