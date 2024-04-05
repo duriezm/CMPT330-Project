@@ -1,4 +1,4 @@
-
+using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(Interactable), true)]

@@ -827,15 +827,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770a938cf55a94f4bbedd7c880a9e8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightDistance: 25
-  fieldOfView: 100
+  sightDistance: 30
+  fieldOfView: 150
   eyeHeight: 0
   leftarm: {fileID: 4163047043603773985}
   rightarm: {fileID: 7338015938361558946}
-  speed: 6
+  speed: 8
   waypoints: []
   state: 0
-  zombieMaxHealth: 1000
+  zombieMaxHealth: 750
   healthBar: {fileID: 9018838876950525783}
 --- !u!95 &671274018693142063
 Animator:

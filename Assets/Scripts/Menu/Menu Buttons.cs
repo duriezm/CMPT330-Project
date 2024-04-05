@@ -1,9 +1,14 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
     public void OnPlayButton()
     {
         StartCoroutine(OnPlayButtonWait());
@@ -24,6 +29,7 @@ public class MenuButtons : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         Application.Quit();
+        //EditorApplication.Exit(0);
         Debug.Log("Game is exiting");
     }
     IEnumerator OptionsScreenWait()
@@ -34,11 +40,13 @@ public class MenuButtons : MonoBehaviour
     IEnumerator OnTutorialButtonWait()
     {
         yield return new WaitForSeconds(.5f);
+        Cursor.visible = false;
         SceneManager.LoadScene("Tutorial");
     }
     IEnumerator OnPlayButtonWait()
     {
         yield return new WaitForSeconds(.5f);
+        Cursor.visible = false;
         SceneManager.LoadScene("Game Main");
     }
 }

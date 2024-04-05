@@ -7,10 +7,12 @@ public class GameOverMenu : MonoBehaviour
 
     public void gameOver()
     {
+        Cursor.visible = true;
         gameOverUI.SetActive(true);
     }
     public void MainMenu()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene("Main Menu");
     }
     public void QuitGame()
@@ -20,6 +22,7 @@ public class GameOverMenu : MonoBehaviour
     }
     public void ResetGame()
     {
+        Cursor.visible = false;
         SceneManager.LoadScene("Tutorial");
     }
 }

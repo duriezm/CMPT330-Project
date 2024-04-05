@@ -902,12 +902,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770a938cf55a94f4bbedd7c880a9e8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightDistance: 40
-  fieldOfView: 100
+  sightDistance: 50
+  fieldOfView: 180
   eyeHeight: 0
   leftarm: {fileID: 7220463950077412251}
   rightarm: {fileID: 4046482136279875096}
-  speed: 15
+  speed: 20
   waypoints: []
   state: 0
   zombieMaxHealth: 75

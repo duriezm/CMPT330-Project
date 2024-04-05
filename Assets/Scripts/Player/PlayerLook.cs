@@ -8,7 +8,10 @@ public class PlayerLook : MonoBehaviour
     private float xRotation = 0f;
     public float xSensitivity = 15f;
     public float ySensitivity = 15f;
-    
+    public void Start()
+    {
+        Cursor.visible = false;
+    }
     public void ProcessLook(Vector2 input)
     {
         float mouseX = input.x;

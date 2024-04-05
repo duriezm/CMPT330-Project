@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.7
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31399646, g: 0.32056466, b: 0.30159196, a: 0.7}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1165,6 +1165,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &273938543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3279207351439423487, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: zombiecamera
+      value: 
+      objectReference: {fileID: 1398963893}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 81.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 29.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1041607668}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 680964555}
+    - target: {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_Name
+      value: SpeedZombie (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
 --- !u!1 &313479368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,6 +5084,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969581260}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1004445113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3279207351439423487, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: zombiecamera
+      value: 
+      objectReference: {fileID: 1398963893}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 81.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1041607668}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 680964555}
+    - target: {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_Name
+      value: SpeedZombie (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
 --- !u!1 &1035509828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5716,6 +5886,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121310050}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1127656233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3279207351439423487, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: zombiecamera
+      value: 
+      objectReference: {fileID: 1398963893}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575604909787651048, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 81.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641692000675039195, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1041607668}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 680964555}
+    - target: {fileID: 8968964026469035264, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: m_Name
+      value: SpeedZombie (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
 --- !u!4 &1146286758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2718957474909456230, guid: bf83772f56b73ce40b1e99f516f2a1cb, type: 3}
@@ -6083,6 +6338,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2922752423425997075, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922752423425997075, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.16981131
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922752423425997075, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.09090422
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922752423425997075, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.040690627
+      objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -6097,7 +6368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.2
+      value: 8.09
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6105,7 +6376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.3
+      value: 4.83
       objectReference: {fileID: 0}
     - target: {fileID: 3321514927635615130, guid: e632f1c1d79d6594e96f8e183bef872c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8465,6 +8736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHUD
       objectReference: {fileID: 0}
+    - target: {fileID: 3484104719261351129, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 4531874213122006554, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8616,7 +8891,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1467494935708410299, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1718067294}
   m_SourcePrefab: {fileID: 100100000, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
 --- !u!1 &1636304349
 GameObject:
@@ -9193,6 +9471,23 @@ Transform:
   - {fileID: 1689988808}
   m_Father: {fileID: 1462015039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1718067292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467494935708410299, guid: 6ff5f6aabcedf06448b148c1fa6da1e0, type: 3}
+  m_PrefabInstance: {fileID: 1622019658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1718067294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718067292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f6e98ff1671814c8f98675bc9070ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1728442687
 GameObject:
   m_ObjectHideFlags: 0
@@ -11307,6 +11602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assult Rifle bouncy
       objectReference: {fileID: 0}
+    - target: {fileID: 381751125857247039, guid: 291b11571f906f64da650013a7251270, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 667564669650202655, guid: 291b11571f906f64da650013a7251270, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.259
@@ -11433,6 +11732,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4457972405791845435, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457972405791845435, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
+      propertyPath: sightDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457972405791845435, guid: 430800d3771669b4dbf65cbaf1a26f1a, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -11461,6 +11768,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 212943766632254996, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 212943766632254996, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
+      propertyPath: sightDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 212943766632254996, guid: b266da31f57fee147beae25a6a5d5aa0, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -11546,6 +11861,14 @@ PrefabInstance:
       propertyPath: zombiecamera
       value: 
       objectReference: {fileID: 1398963893}
+    - target: {fileID: 514205965027985063, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 514205965027985063, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
+      propertyPath: sightDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 514205965027985063, guid: c0206b1d8eaa2d04685929fc065115b5, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -11753,6 +12076,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442342098875243329, guid: c2e294f49ecf79347862560f71cdc4c7, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -11925,6 +12252,9 @@ SceneRoots:
   - {fileID: 2809169595520035618}
   - {fileID: 4990404034079153374}
   - {fileID: 5831869562182730788}
+  - {fileID: 273938543}
+  - {fileID: 1004445113}
+  - {fileID: 1127656233}
   - {fileID: 1062172924455357922}
   - {fileID: 1066433541}
   - {fileID: 620234451}

@@ -26,15 +26,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: speed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6198009900028685183}
     - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
+      propertyPath: fieldOfView
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: sightDistance
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1743164918590903411, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: zombieMaxHealth
