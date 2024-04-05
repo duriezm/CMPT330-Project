@@ -177,6 +177,7 @@ MonoBehaviour:
   spawnXEnd: 650
   spawnZStart: 600
   spawnZEnd: 650
+  spawnerLimit: 7
 --- !u!1 &56155359
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,6 +5003,7 @@ MonoBehaviour:
   spawnXEnd: 450
   spawnZStart: 600
   spawnZEnd: 650
+  spawnerLimit: 7
 --- !u!4 &1159326690
 Transform:
   m_ObjectHideFlags: 0
@@ -5354,6 +5356,7 @@ MonoBehaviour:
   spawnXEnd: 350
   spawnZStart: 600
   spawnZEnd: 650
+  spawnerLimit: 7
 --- !u!1001 &1249026958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7629,6 +7632,7 @@ MonoBehaviour:
   spawnXEnd: 350
   spawnZStart: 400
   spawnZEnd: 450
+  spawnerLimit: 7
 --- !u!1 &1629617546
 GameObject:
   m_ObjectHideFlags: 0
