@@ -6468,7 +6468,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287581317}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 9.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6477,7 +6477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: -90, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.4, y: 5.81}
+  m_AnchoredPosition: {x: -14.06, y: 26.7}
   m_SizeDelta: {x: 25, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287581319
@@ -8372,7 +8372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good Luck
+  m_text: "Method 2: \nKill Zombie to start campaign\n-> -> -> ->"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9461,11 +9461,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.6
+      value: -13.77
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.68
+      value: 22.12
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9473,7 +9473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.30070582
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9481,7 +9481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.953717
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9493,7 +9493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 145
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4299629275435337597, guid: 81444e2eb4929b54bbd2cfa814a111c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -9671,7 +9671,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751027956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: -334000983
   m_Radius: 0.5
   m_Speed: 3.5

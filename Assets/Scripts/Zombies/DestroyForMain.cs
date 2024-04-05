@@ -189,7 +189,7 @@ public class DestroyForMain : MonoBehaviour
         {
             //lets set zombie to an animimation to dead, later implementation if time applicable
             Destroy(gameObject);
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("GameMain");
         }
         //print(zombieHealth);
         return;
